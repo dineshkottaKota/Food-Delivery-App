@@ -12,7 +12,11 @@ const PORT = process.env.PORT || 3000;
 
 //middleware
 app.use(express.json());
-app.use(cors({ origin: ['https://food-delivery-app-2k8o.onrender.com/'], credentials: true }));
+app.use(cors({
+  origin: ['https://food-delivery-app-2-d0pf.onrender.com'], // Your frontend domain
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+  credentials: true, // Allow cookies/auth tokens if needed
+}));
 
 
 //db connection
