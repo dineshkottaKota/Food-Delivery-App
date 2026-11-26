@@ -2,9 +2,9 @@
   "name": "food-delivery-app",
   "private": true,
   "scripts": {
-    "test": "npm --prefix Backend test && npm --prefix Frontend test && npm --prefix Admin test",
-    "test:backend": "npm --prefix Backend test",
-    "test:frontend": "npm --prefix Frontend test",
-    "test:admin": "npm --prefix Admin test"
+    "test": "npm --prefix Backend install && npm --prefix Backend test && npm --prefix Frontend install && npm --prefix Frontend test && npm --prefix Admin install && npm --prefix Admin test",
+    "test:backend": "npm --prefix Backend install && npm --prefix Backend test",
+    "test:frontend": "npm --prefix Frontend install && npm --prefix Frontend test",
+    "test:admin": "npm --prefix Admin install && npm --prefix Admin test"
   }
 }
