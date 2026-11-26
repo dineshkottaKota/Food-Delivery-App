@@ -4,7 +4,9 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "vitest run --config ../testcases/backend/vitest.config.js",
+    "test:watch": "vitest --config ../testcases/backend/vitest.config.js"
   },
   "author": "",
   "license": "ISC",
@@ -29,5 +31,9 @@
   "ignore": [
     "node_modules",
     "public"
-  ]
+  ],
+  "devDependencies": {
+    "supertest": "^7.3.2",
+    "vitest": "^2.1.9"
+  }
 }
