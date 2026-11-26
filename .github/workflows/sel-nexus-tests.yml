@@ -1,0 +1,25 @@
+# Added by SEL Nexus CyberSuite (Application Security): runs this repository's tests on the agents' fix
+# branch. When a test fails, the suite's Remediation Agent fixes it and pushes again, which runs this workflow again.
+name: SEL Nexus tests
+on:
+  push:
+    branches: ['ai-remediation/90652bd7-1a310d33']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: sel-nexus-tests-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm install
+      - name: Run all tests
+        run: npm test
