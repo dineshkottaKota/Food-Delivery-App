@@ -12,7 +12,7 @@
     "test:watch": "vitest --config ../testcases/admin/vitest.config.js"
   },
   "dependencies": {
-    "axios": "^1.7.2",
+    "axios": "^1.20.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.24.0",
